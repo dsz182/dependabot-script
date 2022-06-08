@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package_manager: [docker]
+        package_manager: [python]
     steps:
       - uses: actions/checkout@v2
       - name: Prepare environment variables
