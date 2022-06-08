@@ -3,6 +3,7 @@ FROM dependabot/dependabot-core:0.172.2
 ARG CODE_DIR=/home/dependabot/dependabot-script
 RUN mkdir -p ${CODE_DIR}
 COPY --chown=dependabot:dependabot Gemfile Gemfile.lock ${CODE_DIR}/
+COPY native-helpers ${CODE_DIR}/
 WORKDIR ${CODE_DIR}
 
 RUN bundle config set --local path "vendor" \
